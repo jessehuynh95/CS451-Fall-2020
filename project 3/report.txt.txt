@@ -1,0 +1,105 @@
+1. Enter the number of hours it took you to complete the project between
+   the <<< and >>> signs below (eg, <<<10>>>).
+
+   <<<40>>>
+   
+2. Enter the difficulty level (1: very easy; 5: very difficult) of the project
+   between the <<< and >>> signs below (eg, <<<3>>>).
+
+   <<<5>>>
+
+3. Provide a short description of how you approached each problem, issues you 
+   encountered, and how you resolved those issues.
+
+   Problem 1 (Long and Double Basic Types): 
+I modeled these after JLiteralInt and the other provided JLiterals. Making
+the initial files with AST and toJSON methods was the easy part. After that,
+I kept getting errors when trying to run basictypes.java and could not 
+figure it out. The errors were saying it was looking for literals but getting 
+doubles and longs.eventually I narrowed it down and fixed it by editing 
+seebasictypes and seereferencetypes in parser.
+
+I was still getting an invalid statement expression error, which I fixed by 
+editing my statementexpressions andjexpression literal in parser. 
+
+The last thing that needed to be fixed was implementing postincrement and 
+predecrement from problem 2.
+
+
+   Problem 2 (Operators): 
+This problem was pretty straightforward and finished easily. I simply
+defined all the AST representations in the files and modified parser to work
+with them when the tokens came up.
+   
+   Problem 3 (Conditional Expression): 
+I looked through the provided files, and tried to copy what was done in 
+JWhileStatement.java for the conditional statement but adding another
+JExpression for the second part of a conditional statement.
+
+This was giving me problems at first, I was getting errors when running 
+conditionalexpressions.java but I realized that my conditionalexpression file
+ had issues and was not being called properly. I fixed it along with my parser
+ and got it running.
+
+   Problem 4 (Switch Statement):
+Still not completed.
+
+   Problem 5 (Do Statement): 
+After attempting switch statement, this was easy. Similar to the conditional
+expression, I based it off of JWhileStatement.java and I was able to get it
+working on the first try.
+
+   Problem 6 (For Statement): 
+This problem was a bit harder as we needed to increment for this, as opposed 
+to the do, conditional, and while statements. I looked up the description for
+a for statement and found: https://docs.sencha.com/gxt/4.x/javadoc/gwt-2.7.0/
+gwt-dev-2.7.0/com/google/gwt/dev/jjs/ast/JForStatement.html . which helped me 
+make my constructor.  I basically
+
+   Problem 7 (Break Statement):
+Break statement was pretty straight forward, I knew that we had to exit the 
+loop so I tested out leaving the toJSON method at the bare minimum, and 
+luckily it passed the BreakStatement.java test and the gradescope test.
+
+   Problem 8 (Continue Statement):
+At first, I was not sure how to do this one and make it go to the next 
+iteration. I was thinking and just copy and pasted my break statement
+as a placeholder to base it off of. I ran it to see what would happen and it 
+managed to pass the tests.
+
+   Problem 9 (Exception Handlers):
+I tried following as closely to the checklist as I could. I made the 
+throwstatement file somewhat easily, although try was a bit more difficult. 
+The checklist really helped with how to set it up (try block, list of catch
+params, catch clocks, finally block).
+
+What I struggled with was the Jconstructordeclaraction as I had no idea what
+I was supposed to be doing, but eventually I added the exception types into 
+the constructor of it as well as methoddeclaration. I tried adding them
+into the toJSON of both but for some reason having it in constructordecl
+was giving me issues. Modifying parser was easy, although I was getting errors
+that where leading back to javaccparser which I could not figure out and would
+not go away with compiling. I tried editing the file but it did not do much.
+I reread the checklist and saw to edit j--.jj and after editing in the extra
+parameter for Jconstructordeclaraction and JMethodDeclaration, I was able
+to compile and pass the test successfully. 
+
+   Problem 10 (Interface Type Declaration): ...
+
+4. Did you receive help from anyone? List their names, status (classmate, 
+   CS451/651 grad, TA, other), and the nature of help received.
+
+   Name               Status       Help Received
+   ----               ------       -------------
+
+   Nick Pandkewytch   classmate    If I was seeing errors or couldn't get the
+                                    correct output, he gave me hints on how to
+                                    troubleshoot.
+
+5. List any other comments here. Feel free to provide any feedback on how
+   much you learned from doing the assignment, and whether you enjoyed
+   doing it.
+
+This homework was a lot harder than the previous two. For many, there was not
+too much to go off of and the book did not provide too much guidance like it 
+had for me previously. 
