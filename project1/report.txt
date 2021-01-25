@@ -1,0 +1,77 @@
+1. Enter the number of hours it took you to complete the project between
+   the <<< and >>> signs below (eg, <<<10>>>).
+
+   <<<8>>>
+   
+2. Enter the difficulty level (1: very easy; 5: very difficult) of the project
+   between the <<< and >>> signs below (eg, <<<3>>>).
+
+   <<<2>>>
+
+3. Provide a short description of how you approached each problem, issues you 
+   encountered, and how you resolved those issues.
+
+   Problem 1 (Using CLEmitter)
+      Approach: For problem 1, I basically had the genFactorial file open and
+ 	read through it and the book to understand how it worked. Once I had a basic
+ 	understanding of it, it was not too difficult to write the 
+	GenIsPrime program
+
+      Issues and resolution: At first I did not have the book and was just 
+	trying to go off of online resources for CLEmitter and the GenFactorial 
+	program, which made it very difficult. Once I read through appendix D 
+	understanding and writing this got a lot easier. 
+
+   Problem 2 (Arithmetic Operations)
+      Approach: I read through the provided files, tokeninfo, scanner, 
+	parser, JUnary, and Jbinary and got a general idea of what needed
+	 to be done. I then read through the book and saw the example in chapter 1
+	 for how to do JDivideOp. Once completing that, it was very easy to 
+	complete JRemainerOp and JUnaryPlusOp.
+
+      Issues and resolution: I did not have any issues for this one besides 
+	having some issues uploading my files at first. Once I figured out 
+	why my files were not being accepted, this problem seemed to pass 
+	on one of the first tries.
+
+   Problem 3 (Bitwise Operations)
+      Approach: This was basically the same as the last problem, but a bit 
+	more. I just repeated what I did for the last problem and completed it 
+	quickly.
+
+      Issues and resolution: I did not have any issues with problem 3.
+
+   Problem 4 (Shift Operations)
+      Approach: I was doing the same as I did for problems 2 and 3, as it 
+	was pretty straight forward and similar adding all of these.
+
+      Issues and resolution: I realized during this problem that in Parser
+	 I was not adding new expression types and categorizing them 
+	properly, and just adding them under the existing categories. 
+	I went to the project document and went down to the provided grammar
+	 and edited this problem as well as 2 and 3 so Parser was set up 
+	correctly. It did technically pass the test on gradescope without 
+	doing this, however.
+
+4. Did you receive help from anyone? List their names, status (classmate, 
+   CS451/651 grad, TA, other), and the nature of help received.
+
+   Name               Status       Help Received
+   ----               ------       -------------
+
+   Nicholas Pankewytch  Classmate    I generally spoke with him regarding 
+	his methodology vs mine when implementing things. He is the one who 
+	told me to look at the provided lexical grammar at the bottom on the 
+	project handout, which really helped me organize and get my 
+	project working. 
+
+5. List any other comments here. Feel free to provide any feedback on how
+   much you learned from doing the assignment, and whether you enjoyed
+   doing it.
+
+   I felt like I spent the most time on problem 1 due to the fact that I 
+	spent two days trying to do it without the book. Once I had the book
+	 and completed that problem, it took an hour or two for problem 2 and 
+	then problems 3 and 4 followed easily. I enjoyed this homework a bit, 
+	although it was not too hard. I felt like I learned a decent amount 
+	from this first homework. 
