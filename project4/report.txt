@@ -1,0 +1,137 @@
+1. Enter the number of hours it took you to complete the project between
+   the <<< and >>> signs below (eg, <<<10>>>).
+
+   <<<15>>>
+   
+2. Enter the difficulty level (1: very easy; 5: very difficult) of the project
+   between the <<< and >>> signs below (eg, <<<3>>>).
+
+   <<<3>>>
+
+3. Provide a short description of how you approached each problem, issues you 
+   encountered, and how you resolved those issues.
+
+   Part I (Additions to JavaCC Scanner)
+
+   Problem 1 (Multiline Comment): 
+   
+This problem was pretty straight forward. I based my code off of the provided
+single line comment, but with a changed end comment condition. At first I was
+not sure what the end comment part should be, so I tried "*/" and it worked.
+One issue I had was that I did not rename <BEGIN_COMMENT:, <END_COMMENT, and
+<COMMENT: which ended up giving me an error when compiling. I changed them
+slightly and it compiled fine.
+
+
+   Problem 2 (Reserved Words): 
+This was a very straight forward problem, I simply added all the stated 
+reserved words to the list in j--.jj, making sure to follow the order provided
+ in the grammar.
+
+   Problem 3 (Operators): 
+The same as reserved words, I simply added all the listed operators to the 
+list in j--.jj, making sure to follow the order provided in the grammar.
+
+   Problem 4 (Literals): 
+I thought this problem was simple at first, I added LONG_LITERAL based on
+the provided grammer and did the same for DOUBLE_LITERAL. I also added them
+under JExpression literal(). It would not be until later that I realized that
+ I had an issue with my DOUBLE_LITERAL wherethe "([ "+" , "-" ])" part of my 
+ exponents were written as ([<PLUS>|<MINUS>])which was making it so my problem
+ 5 test on gradescope would not pass. I changed this after reading a post on 
+ Piazza and finally got it to pass.A Piazza post also helped me figure out 
+ where to use ()? and ()* in my DOUBLE_LITERAL portion.
+
+   Part II (Additions to JavaCC Parser)
+   
+   Problem 5 (Long and Double Basic Types):
+   At first I simply added long and double to BasicTypes like in parser, 
+   however I could not get this to pass on gradescope. It was not until
+   I went over each problem again that I realized that it was my
+   DOUBLE_LITERAL grammar that was making this fail, as stated in my
+   discussion for problem 4.
+   
+
+   Problem 6 (Operators):
+   This problem was quite time consuming. I basically went back and forth 
+   between j--.jj and my parser.java to implement the operators in the same
+   places as they were in the parser, and to make sure that the previous 
+   operator was pointing at the correct next in line operator. While it took
+   a while, it was one of the simpler problems.
+   
+   Problem 7 (Conditional Expression): 
+   I was not sure how to do this one at first as it was the first problem
+   where you had to assign multiple variables to pass into the function call,
+   however after looking at some provided ones I was able to copy them pretty 
+   easily to call JConditionalExpression after adding a couple variables for
+   it.   
+   
+   Problem 8 (Switch Statement): 
+	I was unable to get my switch statement working in project 3 and did not
+	get a chance to fix it or get this working in project 4.
+	
+   Problem 9 (Do-While Statement): 
+	Going off of what I did for Conditional, I copied my parser over to 
+	JStatement statement in j--.jj and was able to get this to work on the 
+	first try. This did stop working a couple times while I was working on
+	other problems but once the issues with those were fixed it always went
+	back to passing the test. 
+	
+   Problem 10 (For Statement): 
+   This was a bit difficult for me. I started by trying the same thing I had 
+   done for the previous problems, but I could not get it to pass the 
+   gradescope test even though I could run the proiject 4 tests and get it to
+   match the provided AST exactly. I completely rewrote my JForStatement 
+   thinking that it was something wrong with it, but that did not get it to 
+   pass either. I went over my j--.jj entry for it, and concluded that it was
+   correct based on the previous problems and what I had in parser. I then
+   went over the previous problems and saw that I had not added postincrement
+   and predecrement to statementExpression. Once I added them, my forstatement
+   passed the gradescope test.
+
+   Problem 11 (Break Statement): 
+   This problem was very straight forward, I added break into JStatement 
+   statement as I had the previous problems based on my parser and it passed 
+   the tests easily. 
+
+   Problem 12 (Continue Statement):
+	I had assumed this problem would be simple like Break was and implemented
+	it the same way, but I could not get it to pass the gradescope test even
+	though my test AST's matched the provided ones. I worked on this for a 
+	long time. It was here that I went back and managed to fix my 
+	DOUBLE_LITERAL which ended up allowing this problem to pass afterwards.
+
+   Problem 13 (Exception Handlers):
+   I tried to implement this as the previous problems, but I was a bit 
+   confused based on my try and throw implementations. I finally got it
+   implemented but my AST's do not match and it does not pass the test.
+   I have spent a few hours just going over this however I was unable to get
+   it working properly. 
+
+   Problem 14 (Interface Type Declaration): 
+   I was unable to get my switch statement working in project 3 and did not
+	get a chance to fix it or get this working in project 4.
+
+4. Did you receive help from anyone? List their names, status (classmate, 
+   CS451/651 grad, TA, other), and the nature of help received.
+
+   Name               Status       Help Received
+   ----               ------       -------------
+
+   Piazza       Various Classmates    This helped me with regex formatting.
+
+5. List any other comments here. Feel free to provide any feedback on how
+   much you learned from doing the assignment, and whether you enjoyed
+   doing it.
+
+ This project was honestly a bit simpler than the previous one, atleast the 
+ parts I managed to complete. I would have l iked to continue working on the 3
+ 3 unfinished problems, however this is a bad week and I have 3 large projects
+ and 3 exams all in a small time frame so I am having to sacrifice a bit of my
+ grade from this project so I can focus on my next assignment and study.
+ 
+ I found a lot of this project was simply transferring things from parser over
+ to j--.jj, which required figuring out the specific grammar and rules within.
+ While some parts gave me a headache, I would say this project was pretty 
+ enjoyable to do, especially once I figured out my problems which allowed
+ multiple tests to finally pass at once.

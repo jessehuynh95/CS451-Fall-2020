@@ -1,0 +1,106 @@
+1. Enter the number of hours it took you to complete the project between
+   the <<< and >>> signs below (eg, <<<10>>>).
+
+   <<<20>>>
+   
+2. Enter the difficulty level (1: very easy; 5: very difficult) of the project
+   between the <<< and >>> signs below (eg, <<<3>>>).
+
+   <<<5>>>
+
+3. Provide a short description of how you approached each problem, issues you 
+   encountered, and how you resolved those issues.
+
+   Problem 1 (Long and Double Basic Types): ...
+I spent about 3 hours going over JMethodDeclaration and related files trying
+to figure out what I needed to modify in it. After those hours, I moved on
+hoping it was not necessary. I completed everything else in the checklist
+but couldnt get the gradescope tests to pass so I figured that the problem
+might require a later problem to be completed so I moved on to Operators.
+
+I actually completed and passed problem 2 so I went back to problem 1 to
+find the issue. I realized that I did not modify binaryexpressions for
++, -, *, /, etc to accept doubles and longs so I implemented that next
+but still continued receiving errors. I then read on gradescope and saw
+the post about removing trailing L's from long literals. Once I implemented
+that, I still couldn't pass the tests. It wasn't until the next morning that
+I realized that my JVariableDeclaration.java was not included in my uploaded
+files. 
+
+Once I included that, I was able to pass the gradescope test easily.
+
+   Problem 2 (Operators): ...
+This problem wasn't so much hard as it was long. I spent most of my time
+copying and modifying anaylze and codegen methods from exisiting files
+to write the necessary ones. 
+
+I was able to pass all but one test on gradescope, which was a true/false 
+problem. I modified each of the opeartor's codegen until I was able to 
+narrow down which test was failing. It ended up being my JLogicalOrOp
+which once the problem in the codegen was fixed, allowed me to pass the
+gradescope tests.
+   
+   Problem 3 (Conditional Expression): ...
+This was the easiest of the problems for me. I based it off of JIfStatement
+and was able to get it working by only changing a few lines.
+
+   Problem 4 (Switch Statement): ...
+I did not complete this for homeworks 3 and 4, so I was not able to get it
+working for this homework either.
+
+   Problem 5 (Do-While Statement): ...
+At first I was a bit confused for this problem. I started going through all
+provided files and found JIfStatement and my JConditionalStatement's analyze
+and codegen may work for this. I modified those as was able to complete this
+problem easily. 
+
+   Problem 6 (For Statement): ...
+I spent a few hours on this problem. I went based off of the checklist and was
+unable to get it to pass the tests. I spoke to another student who mentioned 
+they had to do looping in theres to account for the contexts in each loop.
+
+I tried implementing a loop however I did not use ArrayLists in my original
+code so I did not have anything to iterate through. After countless attempts,
+I started with a clean slate and just did what the checklist said again and
+was able to pass it.
+
+
+   Problem 7 (Break Statement): ...
+I spent a long time trying to get this to work but I did not understand the
+instructions well enough.
+
+   Problem 8 (Continue Statement): ...
+Did not complete 7, and did not get a chance to start on this. 
+
+   Problem 9 (Exception Handlers): ...
+I did not complete this for homeworks 3 and 4, so I was not able to get it
+working for this homework either.
+
+   Problem 10 (Interface Type Declaration): ...
+I did not complete this for homeworks 3 and 4, so I was not able to get it
+working for this homework either.
+
+4. Did you receive help from anyone? List their names, status (classmate, 
+   CS451/651 grad, TA, other), and the nature of help received.
+
+   Name               Status       Help Received
+   ----               ------       -------------
+Steven Garcia        Classmate    Gave me advice on what to look into when I
+                                   was stuck on certain problems.
+   ...                ...          ...
+
+5. List any other comments here. Feel free to provide any feedback on how
+   much you learned from doing the assignment, and whether you enjoyed
+   doing it.
+
+This was definitely the most challenging homework yet. For a lot of it I 
+felt like there was not much to go off of and took a lot of time and thinking.
+Even with effort there were still a bunch of problems I was unable to 
+complete, the most out of any homework so far for me in this class.
+
+There were a few times I really struggled or was about to give up on the 
+problem but instead started over from scratch and was able to get it working 
+in the end. I regret not completing switch, exception handlers, and interfaces
+in previous homeworks but as I did not even complete break and continue,
+I don't think it would help me much in this homework.
+
