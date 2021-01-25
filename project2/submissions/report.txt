@@ -1,0 +1,86 @@
+1. Enter the number of hours it took you to complete the project between
+   the <<< and >>> signs below (eg, <<<10>>>).
+
+   <<<3>>>
+   
+2. Enter the difficulty level (1: very easy; 5: very difficult) of the project
+   between <<< and >>> signs below (eg, <<<3>>>).
+
+   <<<1>>>
+
+3. Provide a short description of how you approached each problem, issues you 
+   encountered, and how you resolved those issues.
+
+   Problem 1 (Multiline Comment)
+      Approach: This problem was pretty straightforward at the start.
+I knew that I was going to change how scanner looks for '/', so I added
+a case for '*' coming as the nextCh. 
+
+      Issues and resolution: My biggest issue was having scanner
+look for the closing '*/' for the comments. I was overthinking and
+overcomplicating this, trying to do it recursively. I started over
+from the ground up and was able to do a simple while(true) loop that
+broke once I had encountered an '*' followed by an '/'.
+
+   Problem 2 (Reserved Words)
+      Approach: This was probably the most simple of the problems.
+I just added the reserved words into TokenInfo and then added them to
+scanner in the the keywords collection at the top of the scanner file. 
+
+      Issues and resolution: The only issue I had with this was
+with gradescope. The tests for this kept returning errors even though I 
+had all the reserved words in correctly. I realized that for some reason
+the reserved words test would fail until I completed the Literals for
+problem 4. Once I completed the entire project, the tests all passed. 
+
+   Problem 3 (Operators)
+      Approach: I listed out all the operators and first added them all 
+into TokenInfo. Once in TokenInfo, I went down the list adding the
+cases to the scanner file. 
+
+      Issues and resolution: I did not find any issues, this was 
+very easy and similar to project 1 so it was smooth sailing. It did
+take a bit of time to do all the if else statements for the longer 
+operators, like '>>>=' however.
+   
+   Problem 4 (Literals)
+      Approach: It took me a moment to think about this one, but once
+I looked at the project assignment grammar and realized that it gives 
+the definititions of literals it made this problem much easier. 
+For long literals, I go to where digits are scanned and added an if
+statement to check if they end with 'l' or 'L'. If it does, it appends
+that to the string and returns that it is a long literal.
+
+For Double literals, I do something similar except I check for '.' in the 
+string of digits. I then append and keep looking at the nextCh until 
+I encounter a newline, EOFCH, and a few other operators/characters/
+whitespaces. I also added a clause in the '.' case where it will
+check for digits, and if it does, run a while loop with the cases
+above and then return double literal with the appended string.
+
+      Issues and resolution: I kept having an issue where I would get
+an error on gradescope with <IDENTIFIER> = l or L. I looked at my code
+once I had double literals completed, and realized that I was not looking
+at the nextCh after appending the l or L to the string for long
+literals. Once I added a nextCh there, the errors went away. 
+
+4. Did you receive help from anyone? List their names, status (classmate, 
+   CS451/651 grad, TA, other), and the nature of help received.
+
+   Name               Status       Help Received
+   ----               ------       -------------
+ Daniel		Classmate	His post on Piazza in @104 helped with double literals. 
+
+5. List any other comments here. Feel free to provide any feedback on how
+   much you learned from doing the assignment, and whether you enjoyed
+   doing it.
+
+This project seemed easier than 1, most likely because we were already 
+familiar with what needed to be done. I did not have any huge errors,
+most were easily fixed by adjusting missing statements or moving if 
+statements around. 
+
+My solution for problem 4 seems like a lazy solution to me, however I am
+not sure how else I could do it easily. For double literals, I do a 
+while loop and the conditions are if ch != [a bunch of different values].
+This passed the gradescope tests, however I think there is a better way  I could have done this. 
